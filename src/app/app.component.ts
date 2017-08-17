@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
+import {Hero} from './hero-detail/hero';
+import {HeroDetailComponent} from './hero-detail/hero-detail.component';
 
-export class Hero{
-  id: number;
-  name: string;
-}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
