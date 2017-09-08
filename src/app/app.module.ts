@@ -5,13 +5,21 @@ import { HttpModule } from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DataTableModule,SharedModule} from 'primeng/primeng';
 
+import {routing} from './app.routing';
+import { HeroService } from './hero-detail/hero.service';
+
 import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    HeroesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -19,9 +27,10 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
     BrowserAnimationsModule,
     DataTableModule,
     SharedModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
-  providers: [],
+  providers: [HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
